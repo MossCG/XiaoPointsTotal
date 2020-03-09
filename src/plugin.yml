@@ -1,0 +1,21 @@
+name: XiaoPointsTotal
+main: zbv5.cn.XiaoPointsTotal.Main
+version: 1.0.0
+softdepend: [PlaceholderAPI,PlayerPoints]
+commands:
+  XiaoPointsTotal:
+    description: XiaoPointsTotal Command.
+    aliases: [xpt,xptotal]
+permissions:
+  XiaoPointsTotal.info:
+    description: 允许使用指令/XiaoPointsTotal info
+    default: op
+  XiaoPointsTotal.add:
+    description: 允许使用指令/XiaoPointsTotal add
+    default: op
+  XiaoPointsTotal.log:
+    description: 允许使用指令/XiaoPointsTotal log
+    default: op
+  XiaoPointsTotal.reload:
+    description: 允许使用指令/XiaoPointsTotal reload
+    default: op

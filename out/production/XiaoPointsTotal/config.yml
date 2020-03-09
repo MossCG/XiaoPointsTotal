@@ -1,0 +1,18 @@
+#储存方式: Yml Mysql
+Store: Yml
+#数据库配置
+Mysql:
+  Url: "jdbc:mysql://127.0.0.1:3306/db?useSSL=false"
+  User: "root"
+  PassWord: "root"
+  Table: "xiaopointstotal"
+#监听点券变动事件
+PlayerPointsListener:
+  Enable: true
+  #累计模式 Add(增加/充值)  Subtract(减少/消费)
+  Mode: Add
+  #记录点券流水
+  logs: true
+  #当监听到以上模式并执行数量累计时附加执行内容 修改为 Format: [] 则为禁用改功能
+  Format:
+    - "[message]<Prefix>&a成功累计&e<this_abs_points>点券"

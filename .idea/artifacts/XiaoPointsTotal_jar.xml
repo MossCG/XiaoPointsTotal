@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="XiaoPointsTotal:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/XiaoPointsTotal_jar</output-path>
+    <root id="archive" name="XiaoPointsTotal.jar">
+      <element id="module-output" name="XiaoPointsTotal" />
+    </root>
+  </artifact>
+</component>
