@@ -1,6 +1,6 @@
 name: XiaoPointsTotal
 main: zbv5.cn.XiaoPointsTotal.Main
-version: 1.0.0
+version: 1.0.1
 softdepend: [PlaceholderAPI,PlayerPoints]
 commands:
   XiaoPointsTotal:

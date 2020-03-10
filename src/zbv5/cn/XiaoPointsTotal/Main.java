@@ -36,7 +36,6 @@ public class Main extends JavaPlugin
             PrintUtil.PrintConsole("&a检测到前置插件PlayerPoints");
         } else {
             PrintUtil.PrintConsole("&c未检测到前置插件PlayerPoints,部分功能已失效.");
-            return;
         }
 
         if (Bukkit.getPluginManager().isPluginEnabled("PlaceholderAPI"))
