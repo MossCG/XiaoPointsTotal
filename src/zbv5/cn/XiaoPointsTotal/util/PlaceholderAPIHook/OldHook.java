@@ -1,12 +1,13 @@
-package zbv5.cn.XiaoPointsTotal.util;
+package zbv5.cn.XiaoPointsTotal.util.PlaceholderAPIHook;
 
 import me.clip.placeholderapi.external.EZPlaceholderHook;
 import org.bukkit.entity.Player;
 import zbv5.cn.XiaoPointsTotal.Main;
+import zbv5.cn.XiaoPointsTotal.util.DataUtil;
 
-public class PlaceholderAPIHook extends EZPlaceholderHook
+public class OldHook extends EZPlaceholderHook
 {
-    public PlaceholderAPIHook(Main xiaopointstotal)
+    public OldHook(Main xiaopointstotal)
     {
         super(xiaopointstotal, "xiaopointstotal");
     }

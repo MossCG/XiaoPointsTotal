@@ -8,6 +8,7 @@ import zbv5.cn.XiaoPointsTotal.command.MainCommand;
 import zbv5.cn.XiaoPointsTotal.listener.PlayerListener;
 import zbv5.cn.XiaoPointsTotal.listener.PointsListener;
 import zbv5.cn.XiaoPointsTotal.util.*;
+import zbv5.cn.XiaoPointsTotal.util.PlaceholderAPIHook.HookMain;
 
 /**
  * @author wow_xiaoyao
@@ -38,12 +39,11 @@ public class Main extends JavaPlugin
             PrintUtil.PrintConsole("&c未检测到前置插件PlayerPoints,部分功能已失效.");
         }
 
-        if (Bukkit.getPluginManager().isPluginEnabled("PlaceholderAPI"))
+        if(Bukkit.getPluginManager().isPluginEnabled("PlaceholderAPI"))
         {
             PlaceholderAPI = true;
-            new PlaceholderAPIHook(this).hook();
             PrintUtil.PrintConsole("&a检测到前置插件PlaceholderAPI");
-            //保留HOOK
+            HookMain.hook(Bukkit.getPluginManager().getPlugin("PlaceholderAPI").getDescription().getVersion());
         } else {
             PrintUtil.PrintConsole("&c未检测到前置插件PlaceholderAPI,部分功能已失效.");
         }

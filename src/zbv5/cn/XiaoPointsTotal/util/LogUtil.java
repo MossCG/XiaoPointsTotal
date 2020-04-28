@@ -81,7 +81,7 @@ public class LogUtil
             BufferedWriter bw = new BufferedWriter (new OutputStreamWriter (new FileOutputStream (record,true),"UTF-8"));
             if(add)
             {
-                bw.write(PrintUtil.HookVariable(p,Lang.Log_Format.replace("<type>",Lang.Log_Add).replace("<log_timeformat>",DateUtil.getDate(Lang.Log_TimeFormat)) .replace("<points>",Integer.toString(points)) .replace("<because>",because)));
+                bw.write(PrintUtil.HookVariable(p,Lang.Log_Format.replace("<type>",Lang.Log_Add).replace("<log_timeformat>",DateUtil.getDate(Lang.Log_TimeFormat)) .replace("<points>",Integer.toString(points)) .replace("<because>",because))+"\r\n");
                 int Add = config_total.getInt("Add") + points;
                 config_total.set("Add",Add);
                 if(config_total.getString("total."+p.getName()+".uuid") == null)
@@ -94,7 +94,7 @@ public class LogUtil
                     config_total.set("total."+p.getName()+".Add",NewAdd);
                 }
             } else {
-                bw.write(PrintUtil.HookVariable(p,Lang.Log_Format.replace("<type>",Lang.Log_Subtract).replace("<log_timeformat>",DateUtil.getDate(Lang.Log_TimeFormat)) .replace("<points>",Integer.toString(points)) .replace("<because>",because)));
+                bw.write(PrintUtil.HookVariable(p,Lang.Log_Format.replace("<type>",Lang.Log_Subtract).replace("<log_timeformat>",DateUtil.getDate(Lang.Log_TimeFormat)) .replace("<points>",Integer.toString(points)) .replace("<because>",because))+"\r\n");
                 int Subtract = config_total.getInt("Subtract") + Math.abs(points);
                 config_total.set("Subtract",Subtract);
 
