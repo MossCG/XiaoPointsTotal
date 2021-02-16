@@ -89,11 +89,6 @@ public class MainCommand implements CommandExecutor
                     return false;
                 }
                 int points = Integer.parseInt(args[2]);
-                if(points <= 0)
-                {
-                    PrintUtil.PrintCommandSender(sender,true,Lang.NoMore);
-                    return false;
-                }
                 DataUtil.addPlayerDate(p,points);
                 PrintUtil.PrintCommandSender(sender,true,Lang.Executed);
                 return true;
